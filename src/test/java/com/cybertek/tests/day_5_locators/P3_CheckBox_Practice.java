@@ -18,13 +18,22 @@ public class P3_CheckBox_Practice {
         String result = !checkedBox1 ? "Checkbox 1 is not selected.Verification passed!"
                 : "Checkbox 1 is selected.Verification failed!";
         System.out.println(result);
+
+        sleep(2);
+
         //3. Confirm checkbox #2 is SELECTED by default.
         boolean checkedBox2 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[2]")).isSelected();
         result = checkedBox2 ? "Checkbox 2 is selected.Verification passed!"
                 : "Checkbox 2 is not selected.Verification failed!";
         System.out.println(result);
+
+        sleep(2);
+
         //4. Click checkbox #1 to select it.
         driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]")).click();
+
+        sleep(2);
+
         //5. Click checkbox #2 to deselect it.
         driver.findElement(By.xpath("//form[@id='checkboxes']/input[2]")).click();
 

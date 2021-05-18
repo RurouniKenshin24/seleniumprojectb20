@@ -22,6 +22,7 @@ public class CSS_Selector {
         // 2-) Syntax "tagName.classValue" or "tagName#idValue"!
         // "." stands for class attribute and "#" stands for id attribute;
         WebElement searchBoxItem2 = driver.findElement(By.cssSelector("input#twotabsearchtextbox"));
+        searchBoxItem2.clear();
         searchBoxItem2.sendKeys("Metal Spoon" + Keys.ENTER);
     }
 }

@@ -46,12 +46,14 @@ public class Dropdown_Intro {
     }
 
     @Test
-    public void dropdownTest1(){
+    public void dropDownTest1(){
 
         WebElement dropdownObject = driver.findElement(By.id("dropdown"));
         Select simpleDropdown = new Select(dropdownObject);
 
-        simpleDropdown.selectByVisibleText("Option 2");
+//        simpleDropdown.selectByVisibleText("Option 2");
+//        simpleDropdown.selectByValue("1");
+//        simpleDropdown.selectByIndex(0);
 
         String actualDefaultText = simpleDropdown.getFirstSelectedOption().getText();
         String expectedDefaultText = "Please select an option";
@@ -66,6 +68,18 @@ public class Dropdown_Intro {
 
         String actualDefaultText = stateDropdown.getFirstSelectedOption().getText();
         String expectedDefaultText = "Select a State";
+
+        Assert.assertEquals(actualDefaultText,expectedDefaultText);
+    }
+
+    @Test
+    public void dropDownTest3(){
+        WebElement linkDropdown = driver.findElement(By.id("dropdownMenuLink"));
+        linkDropdown.click();
+
+        WebElement googleLink = driver.findElement(By.xpath("//div[@class='dropdown-menu show']/a[1]"));
+        String actualDefaultText = googleLink.getText();
+        String expectedDefaultText = "Google";
 
         Assert.assertEquals(actualDefaultText,expectedDefaultText);
     }

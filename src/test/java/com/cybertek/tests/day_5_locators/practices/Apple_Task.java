@@ -20,7 +20,9 @@ public class Apple_Task {
         List<WebElement> listOfLinks = driver.findElements(By.xpath("//body//a"));
 
         for (WebElement eachLink: listOfLinks){
-            System.out.println(eachLink.getText());
+            if (!eachLink.getText().isEmpty()) {
+                System.out.println(eachLink.getText());
+            }
         }
 
         System.out.println(listOfLinks.size());

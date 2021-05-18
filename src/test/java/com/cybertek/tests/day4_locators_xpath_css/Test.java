@@ -8,5 +8,6 @@ public class Test {
 
         WebDriver driver1 = WebDriverFactory.getDriver("chrome");
         WebDriver driver2 = WebDriverFactory.getDriver("explorer");
+        WebDriver driver3 = WebDriverFactory.getDriver("firefox");
     }
 }

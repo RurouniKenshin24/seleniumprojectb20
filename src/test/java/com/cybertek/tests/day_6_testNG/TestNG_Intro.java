@@ -61,12 +61,12 @@ public class TestNG_Intro {
         String str3 = "Test";
 
         Assert.assertTrue(str1.equals(str2),"Str1 is not equal Str2!");
-        //Assert.assertTrue(str1.equals(str3), "Str1 is not equal Str3!");
+        Assert.assertTrue(str1.equals(str3), "Str1 is not equal Str3!");
         // The test below is the same thing so we don't need it anymore!!!
 
         //These methods compare two String objects without using extra equal method
         // or int, double etc variables!!!
         Assert.assertEquals(str1,str2);
-        Assert.assertEquals(str1,str3,"Str1 is not equal Str3!");
+//        Assert.assertEquals(str1,str3,"Str1 is not equal Str3!");
     }
 }

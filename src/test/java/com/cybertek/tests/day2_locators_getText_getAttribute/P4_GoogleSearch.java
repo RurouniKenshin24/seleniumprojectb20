@@ -16,7 +16,6 @@ public class P4_GoogleSearch {
         //sendKeys() is used for writing something in web!!!
         //Keys.ENTER is used for submitting keys in search box!!!
         driver.findElement(By.name("q")).sendKeys("I am searching in google!" + Keys.ENTER);
-
         String pageTitle = driver.getTitle();
 
         System.out.println(pageTitle.equals("I am searching in google! - Google'da Ara"));

@@ -12,8 +12,7 @@ public class DynamicWebElements {
         driver.get("https://www.google.com");
 
         //"//tagName[contains(@attribute, 'attribute value')]" It provides handling with dynamic web elements!!!
-        driver.findElement(By.xpath("//input[contains(@data-ved, 'UDCAc')]"));
-
+        driver.findElement(By.xpath("//input[contains(@data-ved, 'UDCAY')]"));
 
     }
 }
